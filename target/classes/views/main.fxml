@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.*?>
+<AnchorPane prefHeight="285.0" prefWidth="470.0" stylesheets="@../styles/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pk.edu.nust.seecs.oop.project.controllers.MainController">
+   <children>
+      <StackPane fx:id="dialogStackPane" prefHeight="285.0" prefWidth="470.0">
+         <children>
+            <Pane prefHeight="285.0" prefWidth="470.0">
+               <children>
+                  <VBox layoutX="26.0" layoutY="22.0" spacing="10.0" styleClass="custom-jfx-radio-button">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <children>
+                        <JFXRadioButton selected="true" text="Audio Fingerprinting">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="operationSelected" />
+                           </toggleGroup>
+                        </JFXRadioButton>
+                        <JFXRadioButton text="Generate Waveform" toggleGroup="$operationSelected" />
+                        <JFXRadioButton text="Generate Spectrogram" toggleGroup="$operationSelected" />
+                        <JFXRadioButton text="Whistle Probability" toggleGroup="$operationSelected" />
+                     </children>
+                  </VBox>
+                  <HBox layoutX="26.0" layoutY="150.0" spacing="10.0">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <children>
+                        <Label text="Select File">
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <JFXTextField fx:id="directoryPathField" focusColor="#37b866" prefHeight="25.0" prefWidth="260.0" promptText="Browse Path" />
+                        <Region />
+                        <JFXButton fx:id="browse" buttonType="RAISED" onAction="#browseButtonPressed" text="Browse" />
+                     </children>
+                  </HBox>
+                  <JFXButton fx:id="proceed" buttonType="RAISED" layoutX="391.0" layoutY="203.0" onAction="#proceedButtonPressed" text="Proceed" />
+               </children>
+            </Pane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

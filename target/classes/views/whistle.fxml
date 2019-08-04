@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.chart.StackedBarChart?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane prefHeight="520.0" prefWidth="800.0" stylesheets="@../styles/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pk.edu.nust.seecs.oop.project.controllers.WhistleController">
+   <children>
+      <StackPane fx:id="stackPane" prefHeight="520.0" prefWidth="800.0">
+         <children>
+            <BorderPane prefHeight="200.0" prefWidth="200.0">
+               <top>
+                  <MenuBar BorderPane.alignment="CENTER">
+                    <menus>
+                      <Menu mnemonicParsing="false" text="Chart Type">
+                        <items>
+                              <RadioMenuItem mnemonicParsing="false" onAction="#pieChartSelected" selected="true" text="Pie Chart">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="menuItems" />
+                                 </toggleGroup>
+                              </RadioMenuItem>
+                              <RadioMenuItem mnemonicParsing="false" onAction="#stackedBarChartSelected" text="Stacked Bar Chart" toggleGroup="$menuItems" />
+                        </items>
+                      </Menu>
+                    </menus>
+                  </MenuBar>
+               </top>
+               <center>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <BorderPane.margin>
+                        <Insets />
+                     </BorderPane.margin>
+                     <children>
+                        <JFXButton layoutX="14.0" layoutY="14.0" onAction="#backButtonPressed" prefHeight="25.0" prefWidth="66.0" text="Back" />
+                        <JFXButton layoutX="720.0" layoutY="14.0" onAction="#openButtonPressed" prefHeight="25.0" prefWidth="66.0" text="Open" />
+                        <PieChart fx:id="pieChart" layoutX="50.0" layoutY="46.0" prefHeight="400.0" prefWidth="700.0" />
+                        <StackedBarChart fx:id="stackedBarChart" layoutX="50.0" layoutY="46.0" prefHeight="400.0" prefWidth="700.0">
+                          <xAxis>
+                            <CategoryAxis side="BOTTOM" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis side="LEFT" />
+                          </yAxis>
+                        </StackedBarChart>
+                        <Label fx:id="whistleLabel" layoutX="21.0" layoutY="450.0" text="Label" />
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.layout.*?>
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" stylesheets="@../styles/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pk.edu.nust.seecs.oop.project.controllers.AudioFingerPrintingController">
+   <children>
+      <StackPane fx:id="stackPane" prefHeight="600.0" prefWidth="1000.0">
+         <children>
+            <BorderPane prefHeight="600.0" prefWidth="1000.0">
+               <top>
+                  <HBox spacing="10.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <JFXButton fx:id="backButton" onAction="#backButtonPressed" prefHeight="25.0" prefWidth="66.0" text="Back" />
+                        <JFXButton fx:id="refreshButton" onAction="#refreshButtonHandler" prefHeight="25.0" prefWidth="73.0" text="Refresh" />
+                        <Region prefHeight="25.0" prefWidth="666.0" />
+                        <JFXSpinner fx:id="spinner" prefHeight="23.0" prefWidth="38.0" />
+                        <JFXButton fx:id="addToGraph" onAction="#addToGraphHandler" text="Add to Graph" />
+                     </children>
+                     <padding>
+                        <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                     </padding>
+                  </HBox>
+               </top>
+               <left>
+                  <JFXTreeView fx:id="treeView" BorderPane.alignment="CENTER">
+                     <BorderPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </BorderPane.margin>
+                  </JFXTreeView>
+               </left>
+               <center>
+                  <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <BorderPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </BorderPane.margin>
+                     <children>
+                        <BarChart fx:id="barChart" layoutY="4.0" prefHeight="533.0" prefWidth="709.0">
+                          <xAxis>
+                            <CategoryAxis side="BOTTOM" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis side="LEFT" />
+                          </yAxis>
+                        </BarChart>
+                     </children>
+                  </Pane>
+               </center>
+            </BorderPane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

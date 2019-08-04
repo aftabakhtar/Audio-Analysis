@@ -1,0 +1,39 @@
+.jfx-button {
+    -jfx-button-type: RAISED;
+    -fx-background-color: #A4243B;
+    -fx-text-fill: white;
+    -fx-text: bold;
+
+}
+
+.jfx-text-field {
+    -jfx-focus-color: #A4243B;
+}
+
+.jfx-radio-button {
+    -jfx-selected-color: #A4243B;
+}
+
+.jfx-tree-view {
+    -jfx-background-color: #A4243B;
+}
+
+.tree-cell:selected {
+    -fx-background-color: #A4243B;
+}
+
+.menu:hover {
+    -fx-background-color: #A4243B;
+}
+
+.menu-item:hover {
+    -fx-background-color: #A4243B;
+}
+
+.menu:showing {
+    -fx-background-color: #A4243B;
+}
+
+.menu-item:focused {
+    -fx-background-color: #A4243B;
+}
